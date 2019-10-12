@@ -22,8 +22,6 @@ E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\MetroFramework.dl
 E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\MetroFramework.Fonts.dll
 E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\CSkin.xml
 E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\13water.csprojAssemblyReference.cache
-E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.Form1.resources
-E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.Form2.resources
 E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.FrmReg.resources
 E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.Properties.Resources.resources
 E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\13water.csproj.GenerateResource.cache
@@ -33,3 +31,7 @@ E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\13water.pdb
 E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.FrmLogin.resources
 E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\Newtonsoft.Json.dll
 E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\Newtonsoft.Json.xml
+E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.FrmMain.resources
+E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.FrmBattle.resources
+E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.FrmPlay.resources
+E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.FrmRank.resources

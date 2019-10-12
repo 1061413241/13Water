@@ -1,4 +1,7 @@
-﻿using System;
+﻿using CCWin;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +13,44 @@ using System.Windows.Forms;
 
 namespace _13water
 {
-    public partial class FrmMain : Form
+    public partial class FrmMain : CCSkinMain
     {
         public FrmMain()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// 打开对战界面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sbtnBattle_Click(object sender, EventArgs e)
+        {
+            FrmBattle frm = new FrmBattle();
+            frm.ShowDialog();
+        }
+
+        /// <summary>
+        /// 打开排行榜
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sbtnRank_Click(object sender, EventArgs e)
+        {
+            FrmRank frm = new FrmRank();
+            frm.ShowDialog();
+        }
+
+        /// <summary>
+        /// 打开历史战局
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sbtnRecord_Click(object sender, EventArgs e)
+        {
+            FrmRecord frm = new FrmRecord();
+            frm.ShowDialog();
         }
     }
 }
