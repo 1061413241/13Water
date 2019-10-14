@@ -40,7 +40,9 @@
             this.ColName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.sdgvBattleDetail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sdgvBattleDetail
@@ -81,7 +83,7 @@
             this.sdgvBattleDetail.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.sdgvBattleDetail.HeadFont = new System.Drawing.Font("华文新魏", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sdgvBattleDetail.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.sdgvBattleDetail.Location = new System.Drawing.Point(7, 201);
+            this.sdgvBattleDetail.Location = new System.Drawing.Point(87, 350);
             this.sdgvBattleDetail.Name = "sdgvBattleDetail";
             this.sdgvBattleDetail.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.sdgvBattleDetail.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -91,7 +93,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.sdgvBattleDetail.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.sdgvBattleDetail.RowTemplate.Height = 23;
-            this.sdgvBattleDetail.Size = new System.Drawing.Size(1266, 488);
+            this.sdgvBattleDetail.Size = new System.Drawing.Size(1266, 216);
             this.sdgvBattleDetail.TabIndex = 1;
             this.sdgvBattleDetail.TitleBack = null;
             this.sdgvBattleDetail.TitleBackColorBegin = System.Drawing.Color.White;
@@ -143,18 +145,39 @@
             this.ColCard.ReadOnly = true;
             this.ColCard.Width = 500;
             // 
+            // skinPictureBox1
+            // 
+            this.skinPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox1.Image")));
+            this.skinPictureBox1.Location = new System.Drawing.Point(30, 20);
+            this.skinPictureBox1.Name = "skinPictureBox1";
+            this.skinPictureBox1.Size = new System.Drawing.Size(69, 62);
+            this.skinPictureBox1.TabIndex = 5;
+            this.skinPictureBox1.TabStop = false;
+            this.skinPictureBox1.Click += new System.EventHandler(this.skinPictureBox1_Click);
+            // 
             // FrmBattleDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Back = ((System.Drawing.Image)(resources.GetObject("$this.Back")));
-            this.ClientSize = new System.Drawing.Size(1280, 810);
+            this.ClientSize = new System.Drawing.Size(1440, 810);
+            this.CloseBoxSize = new System.Drawing.Size(0, 0);
+            this.CloseNormlBack = ((System.Drawing.Image)(resources.GetObject("$this.CloseNormlBack")));
+            this.Controls.Add(this.skinPictureBox1);
             this.Controls.Add(this.sdgvBattleDetail);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1440, 810);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1440, 810);
             this.Name = "FrmBattleDetail";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmBattleDetail";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "";
             this.Load += new System.EventHandler(this.FrmBattleDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sdgvBattleDetail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,5 +191,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColScore;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCard;
+        private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
     }
 }

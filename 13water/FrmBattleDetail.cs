@@ -60,5 +60,10 @@ namespace _13water
             }
 
         }
+
+        private void skinPictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

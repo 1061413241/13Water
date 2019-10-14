@@ -34,6 +34,8 @@
             this.sbtnRecord = new CCWin.SkinControl.SkinButton();
             this.sbtnRank = new CCWin.SkinControl.SkinButton();
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
+            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sbtnBattle
@@ -44,7 +46,7 @@
             this.sbtnBattle.DownBack = null;
             this.sbtnBattle.Font = new System.Drawing.Font("华文行楷", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sbtnBattle.ForeColor = System.Drawing.SystemColors.Menu;
-            this.sbtnBattle.Location = new System.Drawing.Point(659, 326);
+            this.sbtnBattle.Location = new System.Drawing.Point(639, 397);
             this.sbtnBattle.MouseBack = null;
             this.sbtnBattle.Name = "sbtnBattle";
             this.sbtnBattle.NormlBack = null;
@@ -67,7 +69,7 @@
             this.sbtnRecord.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.sbtnRecord.Font = new System.Drawing.Font("华文行楷", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sbtnRecord.ForeColor = System.Drawing.SystemColors.Menu;
-            this.sbtnRecord.Location = new System.Drawing.Point(659, 516);
+            this.sbtnRecord.Location = new System.Drawing.Point(639, 587);
             this.sbtnRecord.MouseBack = null;
             this.sbtnRecord.Name = "sbtnRecord";
             this.sbtnRecord.NormlBack = null;
@@ -90,7 +92,7 @@
             this.sbtnRank.DownBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.sbtnRank.Font = new System.Drawing.Font("华文行楷", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sbtnRank.ForeColor = System.Drawing.SystemColors.Menu;
-            this.sbtnRank.Location = new System.Drawing.Point(1066, 326);
+            this.sbtnRank.Location = new System.Drawing.Point(1046, 397);
             this.sbtnRank.MouseBack = null;
             this.sbtnRank.Name = "sbtnRank";
             this.sbtnRank.NormlBack = null;
@@ -113,7 +115,7 @@
             this.skinButton3.DownBaseColor = System.Drawing.Color.Purple;
             this.skinButton3.Font = new System.Drawing.Font("华文行楷", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton3.ForeColor = System.Drawing.SystemColors.Menu;
-            this.skinButton3.Location = new System.Drawing.Point(1066, 516);
+            this.skinButton3.Location = new System.Drawing.Point(1046, 587);
             this.skinButton3.MouseBack = null;
             this.skinButton3.Name = "skinButton3";
             this.skinButton3.NormlBack = null;
@@ -124,19 +126,40 @@
             this.skinButton3.Text = "更多玩法";
             this.skinButton3.UseVisualStyleBackColor = false;
             // 
+            // skinPictureBox1
+            // 
+            this.skinPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.skinPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox1.Image")));
+            this.skinPictureBox1.Location = new System.Drawing.Point(1343, 19);
+            this.skinPictureBox1.Name = "skinPictureBox1";
+            this.skinPictureBox1.Size = new System.Drawing.Size(64, 68);
+            this.skinPictureBox1.TabIndex = 4;
+            this.skinPictureBox1.TabStop = false;
+            this.skinPictureBox1.Click += new System.EventHandler(this.skinPictureBox1_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Back = ((System.Drawing.Image)(resources.GetObject("$this.Back")));
             this.ClientSize = new System.Drawing.Size(1440, 810);
+            this.CloseBoxSize = new System.Drawing.Size(0, 0);
+            this.CloseNormlBack = ((System.Drawing.Image)(resources.GetObject("$this.CloseNormlBack")));
+            this.Controls.Add(this.skinPictureBox1);
             this.Controls.Add(this.skinButton3);
             this.Controls.Add(this.sbtnRank);
             this.Controls.Add(this.sbtnRecord);
             this.Controls.Add(this.sbtnBattle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1440, 810);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1440, 810);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "";
+            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,5 +170,6 @@
         private CCWin.SkinControl.SkinButton sbtnRecord;
         private CCWin.SkinControl.SkinButton sbtnRank;
         private CCWin.SkinControl.SkinButton skinButton3;
+        private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
     }
 }

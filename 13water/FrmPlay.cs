@@ -23,8 +23,44 @@ namespace _13water
         private void FrmPlay_Load(object sender, EventArgs e)
         {
             MessageBox.Show(User.card);
+
+            //牌墩1
+            LoadCard(spbCard_First1, User.cardFirst[0]);
+            LoadCard(spbCard_First2, User.cardFirst[1]);
+            LoadCard(spbCard_First3, User.cardFirst[2]);
+            //牌墩2
+            LoadCard(spbCard_Second1, User.cardSecond[0]);
+            LoadCard(spbCard_Second2, User.cardSecond[1]);
+            LoadCard(spbCard_Second3, User.cardSecond[2]);
+            LoadCard(spbCard_Second4, User.cardSecond[3]);
+            LoadCard(spbCard_Second5, User.cardSecond[4]);
+            //牌墩3
+            LoadCard(spbCard_Third1, User.cardThird[0]);
+            LoadCard(spbCard_Third2, User.cardThird[1]);
+            LoadCard(spbCard_Third3, User.cardThird[2]);
+            LoadCard(spbCard_Third4, User.cardThird[3]);
+            LoadCard(spbCard_Third5, User.cardThird[4]);
         }
 
+        /// <summary>
+        /// 根据传入的牌型在相应的picturebox里加载
+        /// </summary>
+        /// <param name="spb"></param>
+        /// <param name="cardtype"></param>
+        private void LoadCard(CCWin.SkinControl.SkinPictureBox spb,string cardtype)
+        {
+            string card = cardtype;
+            if(card[0]=='*')
+            {
+                card = card.Substring(1);
+                spb.Load("images/扑克牌图片/_" + card + ".jpg");
+            }
+            else
+            {
+                spb.Load("images/扑克牌图片/" + card + ".jpg");
+
+            }
+        }
         private void sbtnSubmit_Click(object sender, EventArgs e)
         {
             string cardFirst = string.Join(" ", User.cardFirst);
@@ -54,7 +90,7 @@ namespace _13water
             }
             else
             {
-                MessageBox.Show("登陆失败，用户名或密码错误", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("出牌失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
 
@@ -63,6 +99,15 @@ namespace _13water
             User.cardFirst.Clear();
             User.cardSecond.Clear();
             User.cardThird.Clear();
+        }
+
+        private void skinPictureBox1_Click(object sender, EventArgs e)
+        {
+            //结束当前战局，清空手牌
+            User.cardFirst.Clear();
+            User.cardSecond.Clear();
+            User.cardThird.Clear();
+            this.Close();
         }
     }
 }

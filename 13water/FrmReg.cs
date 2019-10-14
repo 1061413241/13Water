@@ -48,5 +48,10 @@ namespace _13water
             }
 
         }
+        //取消按钮
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

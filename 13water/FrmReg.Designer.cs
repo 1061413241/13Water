@@ -41,7 +41,7 @@
             // lblPwd
             // 
             this.lblPwd.AutoSize = true;
-            this.lblPwd.Location = new System.Drawing.Point(50, 203);
+            this.lblPwd.Location = new System.Drawing.Point(55, 217);
             this.lblPwd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPwd.Name = "lblPwd";
             this.lblPwd.Size = new System.Drawing.Size(41, 12);
@@ -51,7 +51,7 @@
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(50, 170);
+            this.lblUser.Location = new System.Drawing.Point(55, 184);
             this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(41, 12);
@@ -60,7 +60,7 @@
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(99, 200);
+            this.txtPwd.Location = new System.Drawing.Point(104, 214);
             this.txtPwd.Margin = new System.Windows.Forms.Padding(2);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(122, 21);
@@ -68,7 +68,7 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(99, 167);
+            this.txtUser.Location = new System.Drawing.Point(104, 181);
             this.txtUser.Margin = new System.Windows.Forms.Padding(2);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(122, 21);
@@ -76,20 +76,21 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(165, 247);
+            this.btnCancel.Location = new System.Drawing.Point(170, 251);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(56, 18);
+            this.btnCancel.Size = new System.Drawing.Size(56, 20);
             this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "取 消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnReg
             // 
-            this.btnReg.Location = new System.Drawing.Point(99, 247);
+            this.btnReg.Location = new System.Drawing.Point(104, 251);
             this.btnReg.Margin = new System.Windows.Forms.Padding(2);
             this.btnReg.Name = "btnReg";
-            this.btnReg.Size = new System.Drawing.Size(56, 18);
+            this.btnReg.Size = new System.Drawing.Size(56, 20);
             this.btnReg.TabIndex = 7;
             this.btnReg.Text = "注 册";
             this.btnReg.UseVisualStyleBackColor = true;
@@ -100,9 +101,9 @@
             this.gifBox1.BorderColor = System.Drawing.Color.Transparent;
             this.gifBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gifBox1.Image = ((System.Drawing.Image)(resources.GetObject("gifBox1.Image")));
-            this.gifBox1.Location = new System.Drawing.Point(-6, -46);
+            this.gifBox1.Location = new System.Drawing.Point(-2, 25);
             this.gifBox1.Name = "gifBox1";
-            this.gifBox1.Size = new System.Drawing.Size(311, 187);
+            this.gifBox1.Size = new System.Drawing.Size(307, 150);
             this.gifBox1.TabIndex = 13;
             this.gifBox1.Text = "gifBox1";
             // 
@@ -120,10 +121,13 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnReg);
             this.Controls.Add(this.gifBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 300);
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "FrmReg";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.ResumeLayout(false);
             this.PerformLayout();
 

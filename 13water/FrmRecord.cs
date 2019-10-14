@@ -23,7 +23,7 @@ namespace _13water
 
         private void FrmRecord_Load(object sender, EventArgs e)
         {
-            var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=1&limit=10&player_id=" + User.user_id);
+            var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=1&limit=15&player_id=" + User.user_id);
             var request = new RestRequest(Method.GET);
             request.AddHeader("x-auth-token", User.token);
             IRestResponse response = client.Execute(request);
@@ -81,6 +81,11 @@ namespace _13water
                 FrmBattleDetail frm = new FrmBattleDetail();
                 frm.ShowDialog();
             }
+        }
+
+        private void skinPictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

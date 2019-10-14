@@ -54,5 +54,20 @@ namespace _13water
             //}
 
         }
+
+        private void skinPictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// 单击单元格发生的事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sdgvRank_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

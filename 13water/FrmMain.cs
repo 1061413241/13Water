@@ -31,6 +31,7 @@ namespace _13water
         {
             FrmBattle frm = new FrmBattle();
             frm.ShowDialog();
+            //this.Visible = false;
         }
 
         /// <summary>
@@ -42,6 +43,7 @@ namespace _13water
         {
             FrmRank frm = new FrmRank();
             frm.ShowDialog();
+            //this.Visible = false;
         }
 
         /// <summary>
@@ -53,6 +55,12 @@ namespace _13water
         {
             FrmRecord frm = new FrmRecord();
             frm.ShowDialog();
+            //this.Visible = false;
+        }
+
+        private void skinPictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
