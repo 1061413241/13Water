@@ -1,4 +1,5 @@
 # 13Water
+ https://img.shields.io/github/issues/1061413241/13Water 
 
 ![](https://img.shields.io/github/forks/1061413241/13Water)![](https://img.shields.io/github/issues/1061413241/13Water)![](https://img.shields.io/github/stars/1061413241/13Water)
 
@@ -25,4 +26,3 @@
 ## 游戏界面展示
 
 ![]( https://ftp.bmp.ovh/imgs/2019/10/2a9482776376b4a2.png ) 
-
