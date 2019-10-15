@@ -128,6 +128,7 @@
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "FrmReg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmReg_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

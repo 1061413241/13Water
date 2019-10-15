@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -41,8 +42,11 @@
             this.ColScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
+            this.spbPlayer = new CCWin.SkinControl.SkinPictureBox();
+            this.skinToolTipBattleDetail = new CCWin.SkinToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.sdgvBattleDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spbPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // sdgvBattleDetail
@@ -93,7 +97,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.sdgvBattleDetail.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.sdgvBattleDetail.RowTemplate.Height = 23;
-            this.sdgvBattleDetail.Size = new System.Drawing.Size(1266, 216);
+            this.sdgvBattleDetail.Size = new System.Drawing.Size(1266, 143);
             this.sdgvBattleDetail.TabIndex = 1;
             this.sdgvBattleDetail.TitleBack = null;
             this.sdgvBattleDetail.TitleBackColorBegin = System.Drawing.Color.White;
@@ -157,6 +161,24 @@
             this.skinPictureBox1.TabStop = false;
             this.skinPictureBox1.Click += new System.EventHandler(this.skinPictureBox1_Click);
             // 
+            // spbPlayer
+            // 
+            this.spbPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.spbPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.spbPlayer.Image = ((System.Drawing.Image)(resources.GetObject("spbPlayer.Image")));
+            this.spbPlayer.Location = new System.Drawing.Point(1346, 20);
+            this.spbPlayer.Name = "spbPlayer";
+            this.spbPlayer.Size = new System.Drawing.Size(64, 64);
+            this.spbPlayer.TabIndex = 6;
+            this.spbPlayer.TabStop = false;
+            // 
+            // skinToolTipBattleDetail
+            // 
+            this.skinToolTipBattleDetail.AutoPopDelay = 5000;
+            this.skinToolTipBattleDetail.InitialDelay = 500;
+            this.skinToolTipBattleDetail.OwnerDraw = true;
+            this.skinToolTipBattleDetail.ReshowDelay = 800;
+            // 
             // FrmBattleDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -165,6 +187,7 @@
             this.ClientSize = new System.Drawing.Size(1440, 810);
             this.CloseBoxSize = new System.Drawing.Size(0, 0);
             this.CloseNormlBack = ((System.Drawing.Image)(resources.GetObject("$this.CloseNormlBack")));
+            this.Controls.Add(this.spbPlayer);
             this.Controls.Add(this.skinPictureBox1);
             this.Controls.Add(this.sdgvBattleDetail);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -178,6 +201,7 @@
             this.Load += new System.EventHandler(this.FrmBattleDetail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sdgvBattleDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spbPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,5 +216,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColScore;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCard;
         private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
+        private CCWin.SkinControl.SkinPictureBox spbPlayer;
+        private CCWin.SkinToolTip skinToolTipBattleDetail;
     }
 }

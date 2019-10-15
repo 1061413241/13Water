@@ -52,5 +52,11 @@ namespace _13water
         {
             this.Close();
         }
+
+        private void FrmBattle_Load(object sender, EventArgs e)
+        {
+            skinToolTipBattle.SetToolTip(spbPlayer, "玩家ID：" + User.user_id);
+            skinToolTipBattle.SetToolTip(skinPictureBox1, "返回");
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace _13water
 {
     public partial class FrmRecord : CCSkinMain
     {
+        int page = 1;
         public FrmRecord()
         {
             InitializeComponent();
@@ -23,7 +24,12 @@ namespace _13water
 
         private void FrmRecord_Load(object sender, EventArgs e)
         {
-            var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=1&limit=15&player_id=" + User.user_id);
+            skinToolTipRecord.SetToolTip(spbPlayer, "玩家ID：" + User.user_id);
+            skinToolTipRecord.SetToolTip(skinPictureBox1, "返回");
+            skinToolTipRecord.SetToolTip(skinPictureBoxPre, "上一页");
+            skinToolTipRecord.SetToolTip(skinPictureBoxNext, "下一页");
+
+            var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page="+page+"&limit=15&player_id=" + User.user_id);
             var request = new RestRequest(Method.GET);
             request.AddHeader("x-auth-token", User.token);
             IRestResponse response = client.Execute(request);
@@ -86,6 +92,112 @@ namespace _13water
         private void skinPictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void skbtnSearch_Click(object sender, EventArgs e)
+        {
+            string player_id = stxtQuery_id.Text;
+            var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=1&limit=15&player_id=" + player_id);
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("x-auth-token", User.token);
+            IRestResponse response = client.Execute(request);
+            JObject jo = (JObject)JsonConvert.DeserializeObject(response.Content);
+
+            if ((int)jo["status"] == 0)
+            {
+                JArray ja = (JArray)jo["data"];
+                List<MyRecordInfo> listMyRecord = new List<MyRecordInfo>();
+                foreach (var item in ja)
+                {
+                    MyRecordInfo tmp = new MyRecordInfo();
+                    tmp.battle_id = (int)item["id"];
+                    tmp.cardStr = item["card"].ToString();
+                    tmp.score = (int)item["score"];
+                    tmp.timestamp = (long)item["timestamp"];
+                    listMyRecord.Add(tmp);
+                }
+                sdgvMyRecord.AutoGenerateColumns = false;
+                sdgvMyRecord.DataSource = null;
+                sdgvMyRecord.DataSource = listMyRecord;
+            }
+            else
+            {
+                MessageBox.Show("查询记录失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void skinPictureBoxPre_Click(object sender, EventArgs e)
+        {
+            if(page==1)
+            {
+                return;
+            }
+            else
+            {
+                page--;
+
+                var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=" + page + "&limit=15&player_id=" + User.user_id);
+                var request = new RestRequest(Method.GET);
+                request.AddHeader("x-auth-token", User.token);
+                IRestResponse response = client.Execute(request);
+                JObject jo = (JObject)JsonConvert.DeserializeObject(response.Content);
+
+                if ((int)jo["status"] == 0)
+                {
+                    JArray ja = (JArray)jo["data"];
+                    List<MyRecordInfo> listMyRecord = new List<MyRecordInfo>();
+                    foreach (var item in ja)
+                    {
+                        MyRecordInfo tmp = new MyRecordInfo();
+                        tmp.battle_id = (int)item["id"];
+                        tmp.cardStr = item["card"].ToString();
+                        tmp.score = (int)item["score"];
+                        tmp.timestamp = (long)item["timestamp"];
+                        listMyRecord.Add(tmp);
+                    }
+                    sdgvMyRecord.AutoGenerateColumns = false;
+                    sdgvMyRecord.DataSource = null;
+                    sdgvMyRecord.DataSource = listMyRecord;
+                }
+                else
+                {
+                    MessageBox.Show("查询记录失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void skinPictureBoxNext_Click(object sender, EventArgs e)
+        {
+            page++;
+
+            var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=" + page + "&limit=15&player_id=" + User.user_id);
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("x-auth-token", User.token);
+            IRestResponse response = client.Execute(request);
+            JObject jo = (JObject)JsonConvert.DeserializeObject(response.Content);
+
+            if ((int)jo["status"] == 0)
+            {
+                JArray ja = (JArray)jo["data"];
+                List<MyRecordInfo> listMyRecord = new List<MyRecordInfo>();
+                foreach (var item in ja)
+                {
+                    MyRecordInfo tmp = new MyRecordInfo();
+                    tmp.battle_id = (int)item["id"];
+                    tmp.cardStr = item["card"].ToString();
+                    tmp.score = (int)item["score"];
+                    tmp.timestamp = (long)item["timestamp"];
+                    listMyRecord.Add(tmp);
+                }
+                sdgvMyRecord.AutoGenerateColumns = false;
+                sdgvMyRecord.DataSource = null;
+                sdgvMyRecord.DataSource = listMyRecord;
+            }
+            else
+            {
+                MessageBox.Show("查询记录失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

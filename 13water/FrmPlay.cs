@@ -22,8 +22,10 @@ namespace _13water
 
         private void FrmPlay_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(User.card);
-
+            skinToolTipPlay.SetToolTip(spbPlayer, "玩家ID：" + User.user_id);
+            skinToolTipPlay.SetToolTip(skinPictureBox1, "返回");
+            //MessageBox.Show(User.card);
+            
             //牌墩1
             LoadCard(spbCard_First1, User.cardFirst[0]);
             LoadCard(spbCard_First2, User.cardFirst[1]);

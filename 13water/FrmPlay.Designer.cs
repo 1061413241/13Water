@@ -45,6 +45,8 @@
             this.spbCard_Third1 = new CCWin.SkinControl.SkinPictureBox();
             this.spbCard_Second1 = new CCWin.SkinControl.SkinPictureBox();
             this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
+            this.spbPlayer = new CCWin.SkinControl.SkinPictureBox();
+            this.skinToolTipPlay = new CCWin.SkinToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.spbCard_First1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spbCard_Third5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spbCard_Third4)).BeginInit();
@@ -59,6 +61,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.spbCard_Third1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spbCard_Second1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spbPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // sbtnSubmit
@@ -209,6 +212,24 @@
             this.skinPictureBox1.TabStop = false;
             this.skinPictureBox1.Click += new System.EventHandler(this.skinPictureBox1_Click);
             // 
+            // spbPlayer
+            // 
+            this.spbPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.spbPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.spbPlayer.Image = ((System.Drawing.Image)(resources.GetObject("spbPlayer.Image")));
+            this.spbPlayer.Location = new System.Drawing.Point(1346, 20);
+            this.spbPlayer.Name = "spbPlayer";
+            this.spbPlayer.Size = new System.Drawing.Size(64, 64);
+            this.spbPlayer.TabIndex = 15;
+            this.spbPlayer.TabStop = false;
+            // 
+            // skinToolTipPlay
+            // 
+            this.skinToolTipPlay.AutoPopDelay = 5000;
+            this.skinToolTipPlay.InitialDelay = 500;
+            this.skinToolTipPlay.OwnerDraw = true;
+            this.skinToolTipPlay.ReshowDelay = 800;
+            // 
             // FrmPlay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -217,6 +238,7 @@
             this.ClientSize = new System.Drawing.Size(1440, 810);
             this.CloseBoxSize = new System.Drawing.Size(0, 0);
             this.CloseNormlBack = ((System.Drawing.Image)(resources.GetObject("$this.CloseNormlBack")));
+            this.Controls.Add(this.spbPlayer);
             this.Controls.Add(this.skinPictureBox1);
             this.Controls.Add(this.spbCard_Second1);
             this.Controls.Add(this.spbCard_Third1);
@@ -255,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.spbCard_Third1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spbCard_Second1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spbPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -276,5 +299,7 @@
         private CCWin.SkinControl.SkinPictureBox spbCard_Third1;
         private CCWin.SkinControl.SkinPictureBox spbCard_Second1;
         private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
+        private CCWin.SkinControl.SkinPictureBox spbPlayer;
+        private CCWin.SkinToolTip skinToolTipPlay;
     }
 }

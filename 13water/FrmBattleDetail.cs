@@ -26,6 +26,8 @@ namespace _13water
 
         public void FrmBattleDetail_Load(object sender, EventArgs e)
         {
+            skinToolTipBattleDetail.SetToolTip(spbPlayer, "玩家ID：" + User.user_id);
+            skinToolTipBattleDetail.SetToolTip(skinPictureBox1, "返回");
             var client = new RestClient("https://api.shisanshui.rtxux.xyz/history/" + QueryBattle_id.ToString());
             var request = new RestRequest(Method.GET);
             request.AddHeader("x-auth-token", User.token);

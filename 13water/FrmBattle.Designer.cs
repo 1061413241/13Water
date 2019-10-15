@@ -32,7 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBattle));
             this.sbtnStart = new CCWin.SkinControl.SkinButton();
             this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
+            this.spbPlayer = new CCWin.SkinControl.SkinPictureBox();
+            this.skinToolTipBattle = new CCWin.SkinToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spbPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // sbtnStart
@@ -66,6 +69,24 @@
             this.skinPictureBox1.TabStop = false;
             this.skinPictureBox1.Click += new System.EventHandler(this.skinPictureBox1_Click);
             // 
+            // spbPlayer
+            // 
+            this.spbPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.spbPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.spbPlayer.Image = ((System.Drawing.Image)(resources.GetObject("spbPlayer.Image")));
+            this.spbPlayer.Location = new System.Drawing.Point(1346, 20);
+            this.spbPlayer.Name = "spbPlayer";
+            this.spbPlayer.Size = new System.Drawing.Size(64, 64);
+            this.spbPlayer.TabIndex = 6;
+            this.spbPlayer.TabStop = false;
+            // 
+            // skinToolTipBattle
+            // 
+            this.skinToolTipBattle.AutoPopDelay = 5000;
+            this.skinToolTipBattle.InitialDelay = 500;
+            this.skinToolTipBattle.OwnerDraw = true;
+            this.skinToolTipBattle.ReshowDelay = 800;
+            // 
             // FrmBattle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -74,6 +95,7 @@
             this.ClientSize = new System.Drawing.Size(1440, 810);
             this.CloseBoxSize = new System.Drawing.Size(0, 0);
             this.CloseNormlBack = ((System.Drawing.Image)(resources.GetObject("$this.CloseNormlBack")));
+            this.Controls.Add(this.spbPlayer);
             this.Controls.Add(this.skinPictureBox1);
             this.Controls.Add(this.sbtnStart);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -85,7 +107,9 @@
             this.Name = "FrmBattle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "";
+            this.Load += new System.EventHandler(this.FrmBattle_Load);
             ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spbPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -94,5 +118,7 @@
 
         private CCWin.SkinControl.SkinButton sbtnStart;
         private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
+        private CCWin.SkinControl.SkinPictureBox spbPlayer;
+        private CCWin.SkinToolTip skinToolTipBattle;
     }
 }

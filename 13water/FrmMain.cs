@@ -17,6 +17,7 @@ namespace _13water
 {
     public partial class FrmMain : CCSkinMain
     {
+        int trick = 10;
         public FrmMain()
         {
             InitializeComponent();
@@ -58,9 +59,29 @@ namespace _13water
             //this.Visible = false;
         }
 
-        private void skinPictureBox1_Click(object sender, EventArgs e)
+        private void spbClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void skinButton3_Click(object sender, EventArgs e)
+        {
+            if(trick==0)
+            {
+                MessageBox.Show("哈哈哈，被骗了吧", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                trick = 10;
+            }
+            else
+            {
+                MessageBox.Show("点击" + trick.ToString() + "下开启更多玩法！","信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                trick--;
+            }
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            sToolTipMain.SetToolTip(spbPlayer, "玩家ID：" + User.user_id);
+            sToolTipMain.SetToolTip(spbClose, "退出游戏");
         }
     }
 }
