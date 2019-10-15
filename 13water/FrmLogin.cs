@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using CCWin.SkinClass;
+using CCWin;
 
 namespace _13water
 {
@@ -78,6 +79,12 @@ namespace _13water
             //}
         }
 
-
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Return)
+            {
+                Login();
+            }
+        }
     }
 }

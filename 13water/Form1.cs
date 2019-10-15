@@ -1,4 +1,4 @@
-﻿using MetroFramework.Forms;
+﻿using CCWin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,16 +11,11 @@ using System.Windows.Forms;
 
 namespace _13water
 {
-    public partial class Form1 : MetroForm
+    public partial class Form1 : CCSkinMain
     {
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

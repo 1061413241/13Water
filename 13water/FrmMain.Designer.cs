@@ -34,8 +34,11 @@
             this.sbtnRecord = new CCWin.SkinControl.SkinButton();
             this.sbtnRank = new CCWin.SkinControl.SkinButton();
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
-            this.skinPictureBox1 = new CCWin.SkinControl.SkinPictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).BeginInit();
+            this.spbClose = new CCWin.SkinControl.SkinPictureBox();
+            this.sToolTipMain = new CCWin.SkinToolTip(this.components);
+            this.spbPlayer = new CCWin.SkinControl.SkinPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.spbClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spbPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // sbtnBattle
@@ -125,18 +128,37 @@
             this.skinButton3.TabIndex = 3;
             this.skinButton3.Text = "更多玩法";
             this.skinButton3.UseVisualStyleBackColor = false;
+            this.skinButton3.Click += new System.EventHandler(this.skinButton3_Click);
             // 
-            // skinPictureBox1
+            // spbClose
             // 
-            this.skinPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.skinPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("skinPictureBox1.Image")));
-            this.skinPictureBox1.Location = new System.Drawing.Point(1343, 19);
-            this.skinPictureBox1.Name = "skinPictureBox1";
-            this.skinPictureBox1.Size = new System.Drawing.Size(64, 68);
-            this.skinPictureBox1.TabIndex = 4;
-            this.skinPictureBox1.TabStop = false;
-            this.skinPictureBox1.Click += new System.EventHandler(this.skinPictureBox1_Click);
+            this.spbClose.BackColor = System.Drawing.Color.Transparent;
+            this.spbClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.spbClose.Image = ((System.Drawing.Image)(resources.GetObject("spbClose.Image")));
+            this.spbClose.Location = new System.Drawing.Point(1346, 20);
+            this.spbClose.Name = "spbClose";
+            this.spbClose.Size = new System.Drawing.Size(64, 68);
+            this.spbClose.TabIndex = 4;
+            this.spbClose.TabStop = false;
+            this.spbClose.Click += new System.EventHandler(this.spbClose_Click);
+            // 
+            // sToolTipMain
+            // 
+            this.sToolTipMain.AutoPopDelay = 5000;
+            this.sToolTipMain.InitialDelay = 500;
+            this.sToolTipMain.OwnerDraw = true;
+            this.sToolTipMain.ReshowDelay = 800;
+            // 
+            // spbPlayer
+            // 
+            this.spbPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.spbPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.spbPlayer.Image = ((System.Drawing.Image)(resources.GetObject("spbPlayer.Image")));
+            this.spbPlayer.Location = new System.Drawing.Point(30, 20);
+            this.spbPlayer.Name = "spbPlayer";
+            this.spbPlayer.Size = new System.Drawing.Size(64, 64);
+            this.spbPlayer.TabIndex = 5;
+            this.spbPlayer.TabStop = false;
             // 
             // FrmMain
             // 
@@ -146,7 +168,8 @@
             this.ClientSize = new System.Drawing.Size(1440, 810);
             this.CloseBoxSize = new System.Drawing.Size(0, 0);
             this.CloseNormlBack = ((System.Drawing.Image)(resources.GetObject("$this.CloseNormlBack")));
-            this.Controls.Add(this.skinPictureBox1);
+            this.Controls.Add(this.spbPlayer);
+            this.Controls.Add(this.spbClose);
             this.Controls.Add(this.skinButton3);
             this.Controls.Add(this.sbtnRank);
             this.Controls.Add(this.sbtnRecord);
@@ -159,7 +182,9 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "";
-            ((System.ComponentModel.ISupportInitialize)(this.skinPictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.spbClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spbPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,6 +195,8 @@
         private CCWin.SkinControl.SkinButton sbtnRecord;
         private CCWin.SkinControl.SkinButton sbtnRank;
         private CCWin.SkinControl.SkinButton skinButton3;
-        private CCWin.SkinControl.SkinPictureBox skinPictureBox1;
+        private CCWin.SkinControl.SkinPictureBox spbClose;
+        private CCWin.SkinToolTip sToolTipMain;
+        private CCWin.SkinControl.SkinPictureBox spbPlayer;
     }
 }

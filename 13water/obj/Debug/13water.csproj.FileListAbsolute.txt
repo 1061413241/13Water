@@ -151,3 +151,6 @@ E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\System.Runtime.Co
 E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\13water.exe.config
 E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.FrmBattleDetail.resources
+E:\项目\福建十三水\13water_c#\13water\13water\obj\Debug\_13water.Form1.resources
+E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\13water.exe.CodeAnalysisLog.xml
+E:\项目\福建十三水\13water_c#\13water\13water\bin\Debug\13water.exe.lastcodeanalysissucceeded

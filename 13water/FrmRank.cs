@@ -24,6 +24,8 @@ namespace _13water
 
         private void FrmRank_Load(object sender, EventArgs e)
         {
+            skinToolTipRank.SetToolTip(spbPlayer, "玩家ID：" + User.user_id);
+            skinToolTipRank.SetToolTip(skinPictureBox1, "返回");
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.shisanshui.rtxux.xyz/rank");
             request.Method = "GET";
             request.AllowAutoRedirect = false;
@@ -65,9 +67,23 @@ namespace _13water
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void sdgvRank_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        //private void sdgvRank_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.ColumnIndex == 0)
+        //    {
+        //        var row = sdgvRank.Rows[e.RowIndex];
+        //        if (row.Cells[0].Value == null)
+        //        {
+        //            return;
+        //        }
+        //        FrmRecord
 
-        }
+
+        //        FrmBattleDetail.QueryBattle_id = (int)row.Cells[0].Value;
+        //        FrmBattleDetail frm = new FrmBattleDetail();
+        //        frm.ShowDialog();
+        //    }
+
+        //}
     }
 }
