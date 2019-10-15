@@ -97,7 +97,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.sdgvBattleDetail.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.sdgvBattleDetail.RowTemplate.Height = 23;
-            this.sdgvBattleDetail.Size = new System.Drawing.Size(1266, 152);
+            this.sdgvBattleDetail.Size = new System.Drawing.Size(1266, 143);
             this.sdgvBattleDetail.TabIndex = 1;
             this.sdgvBattleDetail.TitleBack = null;
             this.sdgvBattleDetail.TitleBackColorBegin = System.Drawing.Color.White;

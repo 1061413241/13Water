@@ -81,7 +81,7 @@
             this.sdgvRank.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.sdgvRank.HeadFont = new System.Drawing.Font("华文新魏", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.sdgvRank.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.sdgvRank.Location = new System.Drawing.Point(470, 219);
+            this.sdgvRank.Location = new System.Drawing.Point(463, 218);
             this.sdgvRank.Name = "sdgvRank";
             this.sdgvRank.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.sdgvRank.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
@@ -91,7 +91,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.sdgvRank.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.sdgvRank.RowTemplate.Height = 23;
-            this.sdgvRank.Size = new System.Drawing.Size(514, 502);
+            this.sdgvRank.Size = new System.Drawing.Size(526, 502);
             this.sdgvRank.TabIndex = 0;
             this.sdgvRank.TitleBack = null;
             this.sdgvRank.TitleBackColorBegin = System.Drawing.Color.White;
