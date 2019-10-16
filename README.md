@@ -1,7 +1,13 @@
 # 13Water
- https://img.shields.io/github/issues/1061413241/13Water 
 
-![](https://img.shields.io/github/forks/1061413241/13Water)![](https://img.shields.io/github/issues/1061413241/13Water)![](https://img.shields.io/github/stars/1061413241/13Water)
+
+![](https://img.shields.io/github/forks/1061413241/13Water) 
+
+![](https://img.shields.io/github/issues/1061413241/13Water) 
+
+![](https://img.shields.io/github/stars/1061413241/13Water)
+
+
 
 
 
@@ -22,6 +28,10 @@
 #### 方法二
 
 直接下载“13water\bin\”路径下的“Debug”到本地，“Debug”文件夹中包含“13water.exe”可执行文件，运行该文件即可开始游戏。
+
+#### 卸载
+
+软件安装目录下找到Uninstall.exe并运行。
 
 ## 游戏界面展示
 

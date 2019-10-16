@@ -93,7 +93,6 @@ namespace _13water
             else
             {
                 MessageBox.Show("出牌失败", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
 
 

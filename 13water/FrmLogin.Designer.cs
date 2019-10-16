@@ -75,7 +75,7 @@
             this.txtPwd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPwd.Location = new System.Drawing.Point(102, 209);
             this.txtPwd.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPwd.MaxLength = 12;
+            this.txtPwd.MaxLength = 50;
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(122, 21);

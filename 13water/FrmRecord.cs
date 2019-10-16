@@ -16,7 +16,7 @@ namespace _13water
 {
     public partial class FrmRecord : CCSkinMain
     {
-        int page = 1;
+        int page = 0;
         public FrmRecord()
         {
             InitializeComponent();
@@ -28,6 +28,7 @@ namespace _13water
             skinToolTipRecord.SetToolTip(skinPictureBox1, "返回");
             skinToolTipRecord.SetToolTip(skinPictureBoxPre, "上一页");
             skinToolTipRecord.SetToolTip(skinPictureBoxNext, "下一页");
+
 
             var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page="+page+"&limit=15&player_id=" + User.user_id);
             var request = new RestRequest(Method.GET);
@@ -129,7 +130,7 @@ namespace _13water
 
         private void skinPictureBoxPre_Click(object sender, EventArgs e)
         {
-            if(page==1)
+            if(page==0)
             {
                 return;
             }
@@ -137,7 +138,13 @@ namespace _13water
             {
                 page--;
 
-                var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=" + page + "&limit=15&player_id=" + User.user_id);
+
+                string player_id = stxtQuery_id.Text;
+                if(player_id=="")
+                {
+                    player_id = User.user_id.ToString();
+                }
+                var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=" + page + "&limit=15&player_id=" + player_id);
                 var request = new RestRequest(Method.GET);
                 request.AddHeader("x-auth-token", User.token);
                 IRestResponse response = client.Execute(request);
@@ -170,8 +177,12 @@ namespace _13water
         private void skinPictureBoxNext_Click(object sender, EventArgs e)
         {
             page++;
-
-            var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=" + page + "&limit=15&player_id=" + User.user_id);
+            string player_id = stxtQuery_id.Text;
+            if (player_id == "")
+            {
+                player_id = User.user_id.ToString();
+            }
+            var client = new RestClient("https://api.shisanshui.rtxux.xyz/history?page=" + page + "&limit=15&player_id=" + player_id);
             var request = new RestRequest(Method.GET);
             request.AddHeader("x-auth-token", User.token);
             IRestResponse response = client.Execute(request);

@@ -44,117 +44,6 @@ namespace _13water
 
 
         /// <summary>
-        /// 生成牌信息
-        /// </summary>
-        /// <param name="IsCheat">是否带大小王（癞子）</param>
-        /// <param name="AddColor">加几色玩法</param>
-        /// <returns></returns>
-        public static List<int> RuffleCard(bool IsCheat, int AddColor)
-        {
-            int[] idArr;
-
-            if (IsCheat)
-            {
-                //带王
-                if (AddColor == 1)
-                {
-                    idArr = new int[] {
-                   //2   3   4   5   6   7   8   9   10  J   Q   K   A
-                    102,103,104,105,106,107,108,109,110,111,112,113,114,
-                    202,203,204,205,206,207,208,209,210,211,212,213,214,
-                    302,303,304,305,306,307,308,309,310,311,312,313,314,
-                    402,403,404,405,406,407,408,409,410,411,412,413,414,
-                    404,405,406,407,408,409,410,411,412,413,414,
-                    616,
-                    717
-                    };
-                }
-                else if (AddColor == 2)
-                {
-                    idArr = new int[] {
-                    102,103,104,105,106,107,108,109,110,111,112,113,114,
-                    202,203,204,205,206,207,208,209,210,211,212,213,214,
-                    302,303,304,305,306,307,308,309,310,311,312,313,314,
-                    302,303,304,305,306,307,308,309,310,311,312,313,314,
-                    402,403,404,405,406,407,408,409,410,411,412,413,414,
-                    404,405,406,407,408,409,410,411,412,413,414,
-                    616,
-                    717
-                    };
-                }
-                else
-                {
-                    idArr = new int[] {
-                    102,103,104,105,106,107,108,109,110,111,112,113,114,
-                    202,203,204,205,206,207,208,209,210,211,212,213,214,
-                    302,303,304,305,306,307,308,309,310,311,312,313,314,
-                    404,405,406,407,408,409,410,411,412,413,414,
-                    616,
-                    717
-                    };
-                }
-
-            }
-            else
-            {
-                if (AddColor == 1)
-                {
-                    idArr = new int[] {
-                    102,103,104,105,106,107,108,109,110,111,112,113,114,
-                    202,203,204,205,206,207,208,209,210,211,212,213,214,
-                    302,303,304,305,306,307,308,309,310,311,312,313,314,
-                    402,403,404,405,406,407,408,409,410,411,412,413,414,
-                    402,403,404,405,406,407,408,409,410,411,412,413,414
-                    };
-                }
-                else if (AddColor == 2)
-                {
-                    idArr = new int[] {
-                    102,103,104,105,106,107,108,109,110,111,112,113,114,
-                    202,203,204,205,206,207,208,209,210,211,212,213,214,
-                    302,303,304,305,306,307,308,309,310,311,312,313,314,
-                    302,303,304,305,306,307,308,309,310,311,312,313,314,
-                    402,403,404,405,406,407,408,409,410,411,412,413,414,
-                    402,403,404,405,406,407,408,409,410,411,412,413,414
-                    };
-                }
-                else
-                {
-                    idArr = new int[] {
-                    102,103,104,105,106,107,108,109,110,111,112,113,114,
-                    202,203,204,205,206,207,208,209,210,211,212,213,214,
-                    302,303,304,305,306,307,308,309,310,311,312,313,314,
-                    402,403,404,405,406,407,408,409,410,411,412,413,414
-                    };
-                }
-
-            }
-
-            List<int> resCardIds = new List<int>();
-            List<int> cardIds = idArr.ToList<int>();
-            Random rand = new Random();
-            while (cardIds.Count > 0)
-            {
-                int randNum = rand.Next(cardIds.Count);
-                resCardIds.Add(cardIds[randNum]);
-                cardIds.RemoveAt(randNum);
-            }
-
-            return resCardIds;
-        }
-
-        /// <summary>
-        /// 获取一个玩家的手牌 13张
-        /// </summary>
-        /// <returns></returns>
-        public static List<int> GetOnePlayerCard()
-        {
-            List<int> CardList = RuffleCard(true, 0);
-
-            return CardList.GetRange(0, 13);
-        }
-
-        /// <summary>
         /// 计算一副牌里面的所有可能牌型
         /// </summary>
         /// <param name="cardList"></param>
@@ -1120,7 +1009,6 @@ namespace _13water
         {
 
             List<CardModel> cmlist = new List<CardModel>();
-            //List<int> CardList = GetOnePlayerCard();//13张手牌
             //List<int> CardList = new List<int>() { 102, 203, 204, 205, 206, 207, 208, 309, 410, 111, 112, 113, 114 };//自定义13张手牌
             List<int> CardList = new List<int>();
 
@@ -1143,32 +1031,56 @@ namespace _13water
 
             foreach (var item in cmlist)
             {
-                Console.WriteLine("按顺序输出：");
                 int flag = 1;
-                foreach (var item2 in item.typeCardList)
+                if ((item.typeCardList[0].cardType.ToString() == "TwoDouble") && (item.typeCardList[1].cardType.ToString() == "TwoDouble") && ((item.typeCardList[1].cardList[0] % 100) - (item.typeCardList[1].cardList[2] % 100) == 1) && ((item.typeCardList[0].cardList[0] % 100) - (item.typeCardList[0].cardList[2] % 100) > 1))
                 {
-                    //Console.WriteLine(item2.cardType);
-                    //Console.WriteLine(string.Join(",", item2.cardList));
-
-                    for(int i=0;i<item2.cardList.Count;i++)
+                    foreach (var item2 in item.typeCardList)
                     {
-                        if(flag==1)
+
+                        for (int i = 0; i < item2.cardList.Count; i++)
                         {
-                            User.third[i] = item2.cardList[i];
+                            if (flag == 1)
+                            {
+                                User.second[i] = item2.cardList[i];
+                            }
+                            else if (flag == 2)
+                            {
+                                User.third[i] = item2.cardList[i];
+                            }
+                            else if (flag == 3)
+                            {
+                                User.first[i] = item2.cardList[i];
+                            }
                         }
-                        else if(flag==2)
-                        {
-                            User.second[i] = item2.cardList[i];
-                        }
-                        else if(flag==3)
-                        {
-                            User.first[i] = item2.cardList[i];
-                        }
+                        flag++;
                     }
-                    flag++;
+                }
+                else
+                {
+                    foreach (var item2 in item.typeCardList)
+                    {
+
+                        for (int i = 0; i < item2.cardList.Count; i++)
+                        {
+                            if (flag == 1)
+                            {
+                                User.third[i] = item2.cardList[i];
+                            }
+                            else if (flag == 2)
+                            {
+                                User.second[i] = item2.cardList[i];
+                            }
+                            else if (flag == 3)
+                            {
+                                User.first[i] = item2.cardList[i];
+                            }
+                        }
+                        flag++;
+                    }
                 }
                 break;//中断程序，只取生成的第一种牌型
             }
+
 
             reverse1();
 
@@ -1245,7 +1157,7 @@ namespace _13water
         /// 2->&
         /// 3->*
         /// 4->#
-        /// 
+        /// 206,409,309,113,112,111,312,402,110,104,303,311,313
         /// </summary>
         public static void reverse1()
         {

@@ -12,7 +12,7 @@ namespace _13water
     /// </summary>
     public class CardModel
     {
-        public List<TypeCard> typeCardList;
+        public List<TypeCard> typeCardList;//包含牌型和手牌两组
 
         public CardModel()
         {
