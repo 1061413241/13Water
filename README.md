@@ -6,6 +6,7 @@
 ![](https://img.shields.io/github/issues/1061413241/13Water) 
 
 ![](https://img.shields.io/github/stars/1061413241/13Water)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/562643faf1d9414cbd593983da2ec4c1)](https://www.codacy.com/manual/qianwensea/13Water?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=qianwensea/13Water&amp;utm_campaign=Badge_Grade)
 
 
 
